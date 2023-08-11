@@ -16,8 +16,8 @@ def main():
         seven_minute = now.minute
 
         # 1.整點10分出前後3小時
-        # if minute == 10:
-        if True:
+        if minute == 10:
+        # if True:
             today_date = datetime.datetime.now().date().strftime('%Y_%m_%d')
             file_name = f'{today_date}_update.xls'
             response = requests.get(f'https://www.taoyuan-airport.com/uploads/fos/{file_name}')
@@ -74,7 +74,7 @@ def main():
                 for item in all_data:
                     for i, value in enumerate(item[1:]):
                         total[i] += value
-                all_data.append(['總計'] + total)
+                all_data.append(['Total'] + total)
                 print(all_data)
 
                 # columns=['時間區間', '入境桃園(一)', '入境桃園(二)', '出境桃園(一)', '出境桃園(二)']
@@ -163,7 +163,7 @@ def main():
                 for item in all_data:
                     for i, value in enumerate(item[1:]):
                         total[i] += value
-                all_data.append(['總計'] + total)
+                all_data.append(['Total'] + total)
                 print(all_data)
 
                 # columns=['時間區間', '入境桃園(一)', '入境桃園(二)', '出境桃園(一)', '出境桃園(二)']
