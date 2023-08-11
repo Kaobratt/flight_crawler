@@ -77,11 +77,12 @@ def main():
                 all_data.append(['總計'] + total)
                 print(all_data)
 
-                columns=['時間區間', '入境桃園(一)', '入境桃園(二)', '出境桃園(一)', '出境桃園(二)']
+                # columns=['時間區間', '入境桃園(一)', '入境桃園(二)', '出境桃園(一)', '出境桃園(二)']
+                columns=['Time', 'Entering Taoyuan (1)', 'Entering Taoyuan (2)', 'Departing Taoyuan (1)', 'Depart Taoyuan (2)']
                 df1 = pd.DataFrame(all_data, columns=columns)
 
-                font_path = '微软正黑体.ttf'
-                matplotlib.rcParams['font.family'] = matplotlib.font_manager.FontProperties(fname=font_path).get_name()
+                # font_path = '微软正黑体.ttf'
+                # matplotlib.rcParams['font.family'] = matplotlib.font_manager.FontProperties(fname=font_path).get_name()
 
                 fig, ax = plt.subplots(figsize=(2, 2))
                 ax.axis('tight')
@@ -165,11 +166,12 @@ def main():
                 all_data.append(['總計'] + total)
                 print(all_data)
 
-                columns=['時間區間', '入境桃園(一)', '入境桃園(二)', '出境桃園(一)', '出境桃園(二)']
+                # columns=['時間區間', '入境桃園(一)', '入境桃園(二)', '出境桃園(一)', '出境桃園(二)']
+                columns=['Time', 'Entering Taoyuan (1)', 'Entering Taoyuan (2)', 'Departing Taoyuan (1)', 'Depart Taoyuan (2)']
                 df1 = pd.DataFrame(all_data, columns=columns)
 
-                font_path = '微软正黑体.ttf'
-                matplotlib.rcParams['font.family'] = matplotlib.font_manager.FontProperties(fname=font_path).get_name()
+                # font_path = '微软正黑体.ttf'
+                # matplotlib.rcParams['font.family'] = matplotlib.font_manager.FontProperties(fname=font_path).get_name()
 
                 fig, ax = plt.subplots(figsize=(2, 2))
                 ax.axis('tight')
