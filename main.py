@@ -16,8 +16,8 @@ def main():
         seven_minute = now.minute
 
         # 1.整點10分出前後3小時
-        if minute == 10:
-        # if True:
+        # if minute == 10:
+        if True:
             today_date = datetime.datetime.now().date().strftime('%Y_%m_%d')
             file_name = f'{today_date}_update.xls'
             response = requests.get(f'https://www.taoyuan-airport.com/uploads/fos/{file_name}')
