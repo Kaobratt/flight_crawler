@@ -1,5 +1,6 @@
 from Notify import Notify
 
+from datetime import timedelta
 import matplotlib.pyplot as plt
 import pandas as pd
 import matplotlib
@@ -12,13 +13,13 @@ def main():
     while True:
         now = datetime.datetime.now()
         minute = now.minute
-        seven_hour = now.hour
+        seven_hour = now.hour + 8
         seven_minute = now.minute
 
         # 1.整點10分出前後3小時
-        if minute == 10:
-        # if True:
-            today_date = datetime.datetime.now().date().strftime('%Y_%m_%d')
+        # if minute == 10:
+        if True:
+            today_date = (datetime.datetime.now() + timedelta(hours=8)).strftime('%Y_%m_%d')
             file_name = f'{today_date}_update.xls'
             response = requests.get(f'https://www.taoyuan-airport.com/uploads/fos/{file_name}')
 
@@ -26,7 +27,7 @@ def main():
                 with open(file_name, 'wb') as file:
                     file.write(response.content)
 
-                now_hour = str(datetime.datetime.now().hour) + ':00'
+                now_hour = str(datetime.datetime.now().hour + 8) + ':00'
 
                 workbook = xlrd.open_workbook(filename=file_name)
                 worksheet = workbook.sheet_by_index(0)
