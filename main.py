@@ -108,7 +108,7 @@ def main():
                 plt.close()
 
                 Notify('整點10分-提醒', 'data1_table.png')
-                time.sleep(2340)
+                # time.sleep(2340)
 
         # 2.晚上7:00出明天的
         if seven_hour == 19 and seven_minute in [0, 1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ,19, 20]:
@@ -192,7 +192,7 @@ def main():
                 plt.close()
 
                 Notify('晚上7:00-提醒', 'data2_table.png')
-                time.sleep(540)
+                # time.sleep(540)
 
 if __name__ == '__main__':
     main()
