@@ -17,8 +17,8 @@ def test_main_1():
         seven_minute = now.minute
 
         # 1.整點10分出前後3小時
-        # if minute == 10:
-        if True:
+        if minute == 10:
+        # if True:
             today_date = (datetime.datetime.now() + timedelta(hours=8)).strftime('%Y_%m_%d')
             file_name = f'{today_date}_update.xls'
             response = requests.get(f'https://www.taoyuan-airport.com/uploads/fos/{file_name}')
@@ -108,7 +108,7 @@ def test_main_1():
                 plt.close()
 
                 Notify('整點10分-提醒', 'data1_table.png')
-                # time.sleep(2340)
+                time.sleep(2340)
 
         # 2.晚上7:00出明天的
         if seven_hour == 19 and seven_minute in [0, 1, 2, 3, 4 , 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ,19, 20]:
