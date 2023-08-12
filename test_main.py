@@ -9,7 +9,7 @@ import datetime
 import time
 import xlrd
 
-def main():
+def test_main_1():
     while True:
         now = datetime.datetime.now()
         minute = now.minute
